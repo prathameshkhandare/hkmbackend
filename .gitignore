@@ -12,3 +12,7 @@ yarn-error.log*
 .idea/
 *.swp
 *.swo
+
+/src/generated/prisma
+.dev.vars
+.wrangler/

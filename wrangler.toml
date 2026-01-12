@@ -1,0 +1,14 @@
+
+name = "hkmbackend"
+main = "src/server.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# These are defaults/placeholders. Real values should be set in Cloudflare Dashboard or .dev.vars
+CLOUDINARY_CLOUD_NAME = "your_cloud_name"
+# SUPABASE_URL = ""
+# SUPABASE_KEY = ""
+# JWT_SECRET = ""
+# ADMIN_EMAIL = ""
+# ADMIN_PASSWORD = ""
