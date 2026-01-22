@@ -6,8 +6,7 @@ import { sendRegistrationEmailAsync } from '../services/emailService';
 // Validate Cloudinary URL
 const validateCloudinaryUrl = (url: string, cloudName: string): boolean => {
   if (typeof url !== 'string') return false;
-  
-  // Match Cloudinary URL pattern with version number
+    // Match Cloudinary URL pattern with version number
   const pattern = new RegExp(
     `^https://res\\.cloudinary\\.com/${cloudName}/image/upload/v\\d+/icvk/registrations/`
   );
@@ -41,7 +40,7 @@ export const createRegistration = async (c: Context) => {
       }, 400);
     }
 
-    // Validate URLs are valid Cloudinary URLs matches folder
+    // Validate URLs are valid Cloudinary URLs with correct folder
     if (!validateCloudinaryUrl(childPhotoUrl, cloudName)) {
       return c.json({ 
         success: false,
