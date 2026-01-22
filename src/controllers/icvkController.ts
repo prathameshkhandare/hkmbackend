@@ -82,7 +82,7 @@ export const createRegistration = async (c: Context) => {
             pickupContact: body.pickupContact,
             pickupRelation: body.pickupRelation,
             gitaLifeInterest: body.gitaLifeInterest,
-            mediaConsent: body.mediaConsent === 'Yes' || body.mediaConsent === 'true' || body.mediaConsent === true,
+            mediaConsent: String(body.mediaConsent).toLowerCase().startsWith('yes') || body.mediaConsent === true,
             email: body.email,
             childPhotoUrl,
             paymentScreenshotUrl,
